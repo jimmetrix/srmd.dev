@@ -1,0 +1,35 @@
+{
+  "name": "nextjs-tailwind-portfolio-page",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Creative Tim",
+  "license": "See license in https://www.creative-tim.com/license",
+  "homepage": "https://github.com/themewagon/Next.js-Tailwind-CSS-Portfolio-Template",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out"
+  },
+  "dependencies": {
+    "@heroicons/react": "2.0.18",
+    "@material-tailwind/react": "2.1.0",
+    "next": "^14.2.0",
+    "react": "18",
+    "react-dom": "18"
+  },
+  "devDependencies": {
+    "@types/node": "20",
+    "@types/react": "18.2.19",
+    "@types/react-dom": "18",
+    "autoprefixer": "10",
+    "eslint": "8",
+    "eslint-config-next": "^14.2.0",
+    "gh-pages": "^6.3.0",
+    "postcss": "8.4.31",
+    "tailwindcss": "3",
+    "typescript": "5"
+  }
+}
