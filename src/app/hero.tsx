@@ -14,15 +14,15 @@ function Hero() {
             color="blue-gray"
             className="mb-4 lg:text-5xl !leading-tight text-3xl"
           >
-            Welcome to my Web <br /> Development Portofolio!
+            Hi, I&apos;m Sarmad Allawi
           </Typography>
           <Typography
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            I&apos;m Lily Smith, a passionate web developer based in USA. Here,
-            you&apos;ll get a glimpse of my journey in the world of web
-            development, where creativity meets functionality.
+            A passionate web developer based in Baghdad, Iraq. Here,
+            you&apos;ll get a glimpse of my work in the world of web
+            development and design, where creativity meets functionality.
           </Typography>
           <div className="grid">
             <Typography
@@ -35,14 +35,20 @@ function Hero() {
               {/* @ts-ignore */}
               <Input color="gray" label="Enter your email" size="lg" />
               <Button color="gray" className="w-full px-4 md:w-[12rem]">
-                require offer
+                CONTACT ME
               </Button>
             </div>
           </div>
           <Typography variant="small" className="font-normal !text-gray-500">
-            Read my{" "}
-            <a href="#" className="font-medium underline transition-colors">
-              Terms and Conditions
+            or{" "}
+            <a
+              href="https://wa.me/9647822522014"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-green-600 hover:text-green-700 underline transition-colors"
+            >
+              <i className="fa-brands fa-whatsapp text-base" />
+              message me on WhatsApp!
             </a>
           </Typography>
         </div>
@@ -50,7 +56,7 @@ function Hero() {
           width={1024}
           height={1024}
           alt="team work"
-          src={`${getImagePrefix()}image/image-7.svg`}
+          src={`${getImagePrefix()}image/webtech_placeholder.png`}
           className="h-[36rem] w-full rounded-xl object-cover"
         />
       </div>

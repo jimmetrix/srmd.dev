@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/next-script-for-ga */
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
 
@@ -32,7 +32,10 @@ export const metadata: Metadata = {
       },
     ],
   },
-  themeColor: '#000000',
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -45,7 +48,7 @@ export default function RootLayout({
       <head>
         <script
           defer
-          data-site="YOUR_DOMAIN_HERE"
+          data-site="srmd.dev"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
@@ -59,3 +62,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
