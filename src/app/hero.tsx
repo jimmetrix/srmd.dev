@@ -24,33 +24,16 @@ function Hero() {
             you&apos;ll get a glimpse of my work in the world of web
             development and design, where creativity meets functionality.
           </Typography>
-          <div className="grid">
-            <Typography
-              variant="small"
-              className="mb-2 text-gray-900 font-medium"
-            >
-              Your email
-            </Typography>
+          <div className="flex flex-col gap-4 md:flex-row md:items-center">
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
               {/* @ts-ignore */}
-              <Input color="gray" label="Enter your email" size="lg" />
-              <Button color="gray" className="w-full px-4 md:w-[12rem]">
-                CONTACT ME
-              </Button>
+              <a href="#contact">
+                <Button color="gray" className="w-full px-4 md:w-[12rem]">
+                  CONTACT ME
+                </Button>
+              </a>
             </div>
           </div>
-          <Typography variant="small" className="font-normal !text-gray-500">
-            or{" "}
-            <a
-              href="https://wa.me/9647822522014"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-medium text-green-600 hover:text-green-700 underline transition-colors"
-            >
-              <i className="fa-brands fa-whatsapp text-base" />
-              message me on WhatsApp!
-            </a>
-          </Typography>
         </div>
         <Image
           width={1024}

@@ -19,7 +19,7 @@ export function PopularClients() {
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
           <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
-            POPULAR CLIENTS
+            MY CLIENTS
           </Typography>
           <Typography variant="h2" color="blue-gray" className="mb-4">
             Trusted by over 10,000+ <br /> clients
