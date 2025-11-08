@@ -5,7 +5,6 @@ import { Navbar, Footer } from "@/components";
 import Hero from "./hero";
 import Skills from "./skills";
 import Projects from "./projects";
-import Resume from "./resume";
 import Clients from "./clients";
 import ContactForm from "./contact-form";
 
@@ -16,7 +15,6 @@ export default function Portfolio() {
       <Hero />
       <Skills />
       <Projects />
-      <Resume />
       <Clients />
       <ContactForm />
       <Footer />
