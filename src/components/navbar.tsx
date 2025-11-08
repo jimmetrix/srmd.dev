@@ -29,6 +29,25 @@ const NAV_MENU = [
   },
 ];
 
+const scrollToSection = (href: string) => {
+  if (href === "#home" || href === "#") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  const element = document.querySelector(href);
+  if (element) {
+    const navbarHeight = 80; // Approximate navbar height
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+};
+
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
@@ -37,9 +56,9 @@ interface NavItemProps {
 
 function NavItem({ children, href, onNavClick }: NavItemProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href === "#home") {
+    if (href && href.startsWith("#")) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollToSection(href);
     }
     if (onNavClick) {
       onNavClick();
@@ -90,7 +109,13 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <a href="#contact">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("#contact");
+            }}
+          >
             <Button color="gray" className="flex items-center gap-2">
               <i className="fa-solid fa-envelope text-sm" />
               Contact Me
@@ -121,7 +146,15 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <a href="#contact" className="w-full" onClick={handleNavClick}>
+            <a
+              href="#contact"
+              className="w-full"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("#contact");
+                handleNavClick();
+              }}
+            >
               <Button color="gray" className="w-full flex items-center justify-center gap-2">
                 <i className="fa-solid fa-envelope text-sm" />
                 Contact Me
