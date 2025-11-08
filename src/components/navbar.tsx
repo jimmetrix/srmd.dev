@@ -32,14 +32,26 @@ const NAV_MENU = [
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
+  onNavClick?: () => void;
 }
 
-function NavItem({ children, href }: NavItemProps) {
+function NavItem({ children, href, onNavClick }: NavItemProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href === "#home") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    if (onNavClick) {
+      onNavClick();
+    }
+  };
+
   return (
     <li>
       <Typography
         as="a"
         href={href || "#"}
+        onClick={handleClick}
         variant="paragraph"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900 hover:text-gray-700 transition-colors"
@@ -54,6 +66,7 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => setOpen((cur) => !cur);
+  const handleNavClick = () => setOpen(false);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -101,14 +114,14 @@ export function Navbar() {
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
             {NAV_MENU.map(({ name, icon, href }) => (
-              <NavItem key={name} href={href}>
+              <NavItem key={name} href={href} onNavClick={handleNavClick}>
                 <i className={`${icon} text-base`} />
                 {name}
               </NavItem>
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <a href="#contact" className="w-full">
+            <a href="#contact" className="w-full" onClick={handleNavClick}>
               <Button color="gray" className="w-full flex items-center justify-center gap-2">
                 <i className="fa-solid fa-envelope text-sm" />
                 Contact Me
