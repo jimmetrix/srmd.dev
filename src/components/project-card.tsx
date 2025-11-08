@@ -16,24 +16,26 @@ interface ProjectCardProps {
 export function ProjectCard({ img, title, desc }: ProjectCardProps) {
   return (
     <Card color="transparent" shadow={false}>
-      <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
-        <Image
-          src={img}
-          alt={title}
-          width={768}
-          height={768}
-          className="h-full w-full object-cover"
-        />
-      </CardHeader>
+      <a
+        href="https://alghassaq.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block cursor-pointer transition-transform hover:scale-105"
+      >
+        <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48 overflow-hidden rounded-lg">
+          <Image
+            src={img}
+            alt={title}
+            width={768}
+            height={768}
+            className="h-full w-full object-cover"
+          />
+        </CardHeader>
+      </a>
       <CardBody className="p-0 text-center">
-        <a
-          href="https://alghassaq.com/"
-          className="text-blue-gray-900 transition-colors hover:text-gray-800"
-        >
-          <Typography variant="h5" className="mb-2">
-            {title}
-          </Typography>
-        </a>
+        <Typography variant="h5" className="mb-2 text-blue-gray-900">
+          {title}
+        </Typography>
         <Typography className="mb-6 font-normal !text-gray-500">
           {desc}
         </Typography>
