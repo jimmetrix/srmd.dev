@@ -10,14 +10,13 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { EnvelopeIcon, PhoneIcon, TicketIcon } from "@heroicons/react/24/solid";
 
 export function ContactForm() {
   return (
     <section className="px-8 py-16">
       <div id="contact" className="container mx-auto mb-20 text-center">
         <Typography variant="h1" color="blue-gray" className="mb-4">
-          Contact Us
+          CONTACT ME
         </Typography>
         <Typography
           variant="lead"
@@ -38,37 +37,41 @@ export function ContactForm() {
                 variant="lead"
                 className="mx-auto mb-8 text-base !text-gray-500"
               >
-                Fill up the form and our Team will get back to you within 24
+                Fill up the form and I will get back to you within 24
                 hours.
               </Typography>
-              <div className="flex gap-5">
-                <PhoneIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  +1(424) 535 3523
-                </Typography>
-              </div>
+                <a
+                href="https://wa.me/9647822522014"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-5 hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <i className="fa-brands fa-whatsapp h-6 w-6 text-white text-xl flex items-center justify-center" />
+                  <Typography variant="h6" color="white" className="mb-2">
+                    Message me on WhatsApp
+                  </Typography>
+                </a>
               <div className="flex my-2 gap-5">
-                <EnvelopeIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  hello@mail.com
-                </Typography>
-              </div>
-              <div className="flex mb-10 gap-5">
-                <TicketIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  Open Support Ticket
-                </Typography>
+                <a
+                  href="mailto:jmtrx@proton.me"
+                  className="flex my-2 gap-5 hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <i className="fa-solid fa-envelope text-white text-xl flex items-center justify-center w-6 h-6" />
+                  <Typography variant="h6" color="white" className="mb-2">
+                    jmtrx@proton.me
+                  </Typography>
+                </a>
               </div>
               <div className="flex items-center gap-5">
-                <IconButton variant="text" color="white">
-                  <i className="fa-brands fa-facebook text-lg" />
-                </IconButton>
-                <IconButton variant="text" color="white">
-                  <i className="fa-brands fa-instagram text-lg" />
-                </IconButton>
-                <IconButton variant="text" color="white">
-                  <i className="fa-brands fa-github text-lg" />
-                </IconButton>
+                <a
+                  href="https://github.com/jimmetrix"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconButton variant="text" color="white">
+                    <i className="fa-brands fa-github text-lg" />
+                  </IconButton>
+                </a>
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
