@@ -9,7 +9,7 @@ const CLIENTS = [
 
 export function Clients() {
   return (
-    <section className="px-8 py-16">
+    <section id="clients" className="px-8 py-16">
       <div className="container mx-auto text-center">
         <Typography variant="h6" color="blue-gray" className="mb-8">
           MY CLIENTS

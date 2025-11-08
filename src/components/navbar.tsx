@@ -7,27 +7,25 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
-  UserCircleIcon,
-  CommandLineIcon,
-  Squares2X2Icon,
   XMarkIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
   {
-    name: "Page",
-    icon: RectangleStackIcon,
+    name: "Home",
+    href: "#home",
+    icon: "fa-solid fa-house",
   },
   {
-    name: "Account",
-    icon: UserCircleIcon,
+    name: "Skills",
+    href: "#skills",
+    icon: "fa-solid fa-code",
   },
   {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "#",
+    name: "Projects",
+    href: "#projects",
+    icon: "fa-solid fa-folder-open",
   },
 ];
 
@@ -42,10 +40,9 @@ function NavItem({ children, href }: NavItemProps) {
       <Typography
         as="a"
         href={href || "#"}
-        target={href ? "_blank" : "_self"}
         variant="paragraph"
         color="gray"
-        className="flex items-center gap-2 font-medium text-gray-900"
+        className="flex items-center gap-2 font-medium text-gray-900 hover:text-gray-700 transition-colors"
       >
         {children}
       </Typography>
@@ -72,17 +69,19 @@ export function Navbar() {
         Sarmad Designs
         </Typography>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
-          {NAV_MENU.map(({ name, icon: Icon, href }) => (
+          {NAV_MENU.map(({ name, icon, href }) => (
             <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" />
+              <i className={`${icon} text-base`} />
               {name}
             </NavItem>
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text">Sign In</Button>
-          <a href="#">
-            <Button color="gray">blocks</Button>
+          <a href="#contact">
+            <Button color="gray" className="flex items-center gap-2">
+              <i className="fa-solid fa-envelope text-sm" />
+              Contact Me
+            </Button>
           </a>
         </div>
         <IconButton
@@ -101,17 +100,19 @@ export function Navbar() {
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
           <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name, icon: Icon }) => (
-              <NavItem key={name}>
-                <Icon className="h-5 w-5" />
+            {NAV_MENU.map(({ name, icon, href }) => (
+              <NavItem key={name} href={href}>
+                <i className={`${icon} text-base`} />
                 {name}
               </NavItem>
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <Button variant="text">Sign In</Button>
-            <a href="#">
-              <Button color="gray">blocks</Button>
+            <a href="#contact" className="w-full">
+              <Button color="gray" className="w-full flex items-center justify-center gap-2">
+                <i className="fa-solid fa-envelope text-sm" />
+                Contact Me
+              </Button>
             </a>
           </div>
         </div>

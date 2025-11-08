@@ -6,7 +6,7 @@ import { getImagePrefix } from "../../utils/utils";
 
 function Hero() {
   return (
-    <header className="bg-white p-8">
+    <header id="home" className="bg-white p-8">
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
         <div className="row-start-2 lg:row-auto">
           <Typography
