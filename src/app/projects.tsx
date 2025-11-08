@@ -2,46 +2,48 @@
 
 import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
-import { getImagePrefix } from "../../utils/utils";
+
+// Blank gray placeholder image as data URI
+const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='768'%3E%3Crect fill='%23e5e7eb' width='768' height='768'/%3E%3C/svg%3E";
 
 const PROJECTS = [
   {
-    img: `${getImagePrefix()}image/blog-1.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: `${getImagePrefix()}image/blog2.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Landing Page Development",
     desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
   },
   {
-    img: `${getImagePrefix()}image/blog3.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: `${getImagePrefix()}image/blog4.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "E-commerce development",
     desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
   },
   {
-    img: `${getImagePrefix()}image/blog-1.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: `${getImagePrefix()}image/blog2.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Landing Page Development",
     desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
   },
   {
-    img: `${getImagePrefix()}image/blog3.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: `${getImagePrefix()}image/blog4.svg`,
+    img: PLACEHOLDER_IMAGE,
     title: "E-commerce development",
     desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
   },
