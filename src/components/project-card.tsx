@@ -25,9 +25,9 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
           className="h-full w-full object-cover"
         />
       </CardHeader>
-      <CardBody className="p-0">
+      <CardBody className="p-0 text-center">
         <a
-          href="#"
+          href="https://alghassaq.com/"
           className="text-blue-gray-900 transition-colors hover:text-gray-800"
         >
           <Typography variant="h5" className="mb-2">
@@ -37,9 +37,6 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
         <Typography className="mb-6 font-normal !text-gray-500">
           {desc}
         </Typography>
-        <Button color="gray" size="sm">
-          see details
-        </Button>
       </CardBody>
     </Card>
   );

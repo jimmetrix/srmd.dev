@@ -9,43 +9,8 @@ const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 const PROJECTS = [
   {
     img: PLACEHOLDER_IMAGE,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: PLACEHOLDER_IMAGE,
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
+    title: "Al-Ghassaq Website",
+    desc: "Logo and Branding, as well as Website and E-mail service for Al-Ghassaq",
   },
 ];
 
@@ -60,9 +25,7 @@ export function Projects() {
           variant="lead"
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
         >
-          Whether you have a mobile app idea that needs to come to life or a
-          website that requires a facelift, I&apos;m here to turn your digital
-          dreams into reality.
+          Here&apos;s what I&apos;ve been working on
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
