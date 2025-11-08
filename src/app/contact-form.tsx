@@ -8,7 +8,6 @@ import {
   Input,
   Textarea,
   Button,
-  IconButton,
 } from "@material-tailwind/react";
 
 export function ContactForm() {
@@ -60,17 +59,6 @@ export function ContactForm() {
                   <Typography variant="h6" color="white" className="mb-2">
                     jmtrx@proton.me
                   </Typography>
-                </a>
-              </div>
-              <div className="flex items-center gap-5">
-                <a
-                  href="https://github.com/jimmetrix"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconButton variant="text" color="white">
-                    <i className="fa-brands fa-github text-lg" />
-                  </IconButton>
                 </a>
               </div>
             </div>
