@@ -4,14 +4,21 @@ import { ProjectCard } from "@/components";
 import { Typography } from "@material-tailwind/react";
 
 // Blank gray placeholder image as data URI
-const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='768'%3E%3Crect fill='%23e5e7eb' width='768' height='768'/%3E%3C/svg%3E";
+// const PLACEHOLDER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='768' height='768'%3E%3Crect fill='%23e5e7eb' width='768' height='768'/%3E%3C/svg%3E";
 
 const PROJECTS = [
   {
-    img: PLACEHOLDER_IMAGE,
-    title: "Al-Ghassaq Website",
-    desc: "Logo and Branding, as well as Website and E-mail service for Al-Ghassaq",
+    img: "/logos/logo-alghassaq.svg",
+    title: "Al-Ghassaq - Website & Branding",
+    desc: "Logo and Branding, as well as website and E-mail service for Al-Ghassaq.",
+    url: "https://alghassaq.com/",
   },
+  {
+    img: "/logos/logo-unitedspa.png",
+    title: "United S.p.A - Brochure & Website",
+    desc: "Designed brochure and deployed a website & Email service.",
+    url: "https://unitedspairaq.com/"
+  }
 ];
 
 export function Projects() {

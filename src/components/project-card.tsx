@@ -11,27 +11,41 @@ interface ProjectCardProps {
   img: string;
   title: string;
   desc: string;
+  url?: string;
 }
 
-export function ProjectCard({ img, title, desc }: ProjectCardProps) {
+export function ProjectCard({ img, title, desc, url }: ProjectCardProps) {
   return (
     <Card color="transparent" shadow={false}>
-      <a
-        href="https://alghassaq.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block cursor-pointer transition-transform hover:scale-105"
-      >
-        <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48 overflow-hidden rounded-lg">
-          <Image
-            src={img}
-            alt={title}
-            width={768}
-            height={768}
-            className="h-full w-full object-cover"
-          />
-        </CardHeader>
-      </a>
+      {url ? (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block cursor-pointer transition-transform hover:scale-105"
+        >
+          <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48 overflow-hidden rounded-lg">
+            <Image
+              src={img}
+              alt={title}
+              width={768}
+              height={768}
+              className="h-full w-full object-contain p-4"
+            />
+          </CardHeader>
+        </a>
+        ) : (
+          <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48 overflow-hidden rounded-lg">
+            <Image
+              src={img}
+              alt={title}
+              width={768}
+              height={768}
+              className="h-full w-full object-contain p-4"
+            />
+          </CardHeader>
+        )}
+      
       <CardBody className="p-0 text-center">
         <Typography variant="h5" className="mb-2 text-blue-gray-900">
           {title}
