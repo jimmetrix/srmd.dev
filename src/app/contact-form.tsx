@@ -1,6 +1,7 @@
 "use client";
 
-import {
+import { useFormState } from "react-dom";
+import { 
   Typography,
   Card,
   CardBody,
@@ -9,8 +10,12 @@ import {
   Textarea,
   Button,
 } from "@material-tailwind/react";
+import { submitContactForm } from "./contact-action";
+
+const initialState = { message: "" };
 
 export function ContactForm() {
+  const [state, formAction] = useFormState(submitContactForm, initialState)
   return (
     <section className="px-8 py-16">
       <div id="contact" className="container mx-auto mb-20 text-center">
@@ -24,6 +29,11 @@ export function ContactForm() {
           Ready to get started? Feel free to reach out through the contact form,
           and let&apos;s embark on a journey of innovation and success.
         </Typography>
+        {!!state.message && (
+          <Typography variant="small" className="mt-4 text-green-600">
+            {state.message}
+          </Typography>
+        )}
       </div>
       <div>
         <Card shadow={true} className="container mx-auto border border-gray/50">
@@ -63,7 +73,7 @@ export function ContactForm() {
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
-              <form action="#">
+              <form action={formAction}>
                 <div className="mb-8 grid gap-4 lg:grid-cols-2">
                   {/* @ts-ignore */}
                   <Input
@@ -96,7 +106,7 @@ export function ContactForm() {
                   size="lg"
                   variant="static"
                   label="Email"
-                  name="first-name"
+                  name="email"
                   placeholder="eg. lucas@mail.com"
                   containerProps={{
                     className: "!min-w-full mb-8",
