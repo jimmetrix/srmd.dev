@@ -10,7 +10,7 @@ const CLIENTS = [
   },
   {
     name: "unitedspa",
-    logo: "/logos/logo-alghassaq.svg",
+    logo: "/logos/logo-unitedspa.png",
   },
 ];
 
