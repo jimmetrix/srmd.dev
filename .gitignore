@@ -7,36 +7,67 @@
 
 # testing
 /coverage
+.nyc_output/
+*.lcov
 
 # next.js
 /.next/
 /out/
+next-env.d.ts
 
 # production
 /build
+/dist
 
-# misc
+# typescript
+*.tsbuildinfo
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# OS files
 .DS_Store
-*.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env*.local
 
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
+# package managers
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# cursor
-.cursor
+# misc
+*.pem
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
